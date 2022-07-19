@@ -218,6 +218,7 @@ h2{
   li{
   list-style-type: none;
     padding: 0;
+    float: none;
   }
 
 
