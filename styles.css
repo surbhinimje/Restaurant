@@ -1,0 +1,242 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "papyrus";
+  justify-content: center;
+  text-align: center;
+
+}
+.logo{
+  font-size:150%;
+}
+h1{
+  font-family:"Segoe Script", "papyrus";
+  font-size: 200%;
+}
+
+
+ul{
+display: block;
+direction: rtl;
+  overflow: hidden;
+margin: 0;
+}
+li{
+list-style-type: none;
+float: right;
+  padding: 2%;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+  color: white;
+}
+#page {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "head  nav nav nav "
+                       "main main main main"
+                       "about about about about"
+                       "menu menu menu menu"
+                       "gallery gallery gallery gallery"
+                       "contact contact contact contact"
+                       "foot foot foot foot";
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#page > header {
+
+  grid-area: head;
+  float: left;
+  padding-left: 7%;
+  background-color: white;
+}
+
+#page > nav {
+  float: right;
+  padding-right: 7%;
+  grid-area: nav;
+  background-color: white;
+}
+
+#page > main {
+  font-size: 200%;
+padding: 20% ;
+padding-left: 7%;
+padding-top: 15%;
+  grid-area: main;
+}
+#page > about {
+  grid-area: about;
+  padding: 3% 7%;
+  background-color: white;
+}
+#page > menu{
+  grid-area:menu;
+  padding: 3% 7%;
+  background-color: black;
+  color:white;
+margin:0;
+
+}
+
+#page > gallery {
+  grid-area: gallery;
+  background-color: white;
+  color: black;
+  padding: 3% 7%;
+}
+#page > contact {
+  grid-area: contact;
+  background-color: black;
+  color: white;
+padding: 3% 2%;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: white;
+}
+
+main{
+  background-image: url('https://images.unsplash.com/photo-1516685018646-549198525c1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-position: center;
+padding: 7%;
+text-align: left;
+font-size: 200%;
+  background-repeat: no-repeat;
+  background-size: cover;
+color: white;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+.item{
+  width:55%;
+  float:left;
+  text-align:left;
+}
+.name{
+  font-weight: 900;
+
+}
+.desc{
+
+text-decoration: none;
+  text-align: left;
+}
+.price{
+  font-weight: bolder;
+  width:25%;
+  float:right;
+  padding-right:2%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rowgallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.columngallery {
+  flex: 33%;
+  max-width: 33%;
+
+}
+
+.columngallery img {
+border: 10px solid white;
+  vertical-align: middle;
+  width: 100%;
+
+}
+contact .column{
+  width:25%;
+}
+contact hr{
+  width: 25%;
+}
+@media screen and (max-width: 1366px) {
+
+  #page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas: "head  head head head head"
+                        "nav nav nav nav nav "
+                         "main main main main main"
+                         "about about about about about"
+                         "menu menu menu menu menu"
+                         "gallery gallery gallery gallery gallery"
+                         "contact contact contact contact contact"
+                         "foot foot foot foot foot";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #page > header {
+    grid-area: head;
+    background-color: white;
+  }
+
+  #page > nav {
+    padding: 0;
+    grid-area: nav;
+    background-color: white;
+  }
+  #page > main {
+    padding-left: 4%;
+    grid-area: main;
+    font-size: 90%;
+    background-color: white;
+  }
+h1{
+  font-size: 150%;
+}
+h2{
+  font-size: 100%;
+}
+
+  li{
+  list-style-type: none;
+    padding: 0;
+  }
+
+
+  .column , .columngallery {
+    flex: 100%;
+    max-width: 100%;
+
+  }
+  .columngallery img {
+
+    vertical-align: middle;
+    width: 100%;
+
+  }
+  .row , .rowgallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+
+}
