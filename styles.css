@@ -200,6 +200,7 @@ contact hr {
 
   body {
     font-size: 230%;
+    font-family: "Courier Prime";
   }
 
   #page>header {
@@ -224,7 +225,7 @@ contact hr {
   }
 
   h1 {
-    font-family: "Segoe Script", "papyrus";
+    font-family: 'Dancing Script', cursive;
     font-size: 180%;
   }
 
